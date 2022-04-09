@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  oracle-db:
+    image: quillbuilduser/oracle-18-xe
+    ports:
+      - 1521:1521
+      - 5500:5500
+    volumes:
+      - oraclevolume:/oradata
+
+volumes:
+  oraclevolume:
+    name: oraclevolume
